@@ -11,10 +11,25 @@ public class CreateStudent {
 		  entitymanager.getTransaction().begin();
 		  
 		  Student student =new Student();
-		  student.setSid(100);
-		  student.setSname("logu");
+		  student.setSid(105);
+		  student.setSname("logu3");
 		  student.setAge(21);
 		  student.setc_Class("A");
+		  
+		  Student student1 =new Student(106,"raveena",21,"a");
+
+//		  student.setSid(101);
+//		  student.setSname("logu1");
+//		  student.setAge(21);
+//		  student.setc_Class("A");
+//		  
+//		 		  student.setSid(102);
+//		  student.setSname("logu2");
+//		  student.setAge(21);
+//		  student.setc_Class("A");
+		  
+
+		  entitymanager.persist(student1);
 		  
 		  entitymanager.persist(student);
 		  entitymanager.getTransaction().commit();
